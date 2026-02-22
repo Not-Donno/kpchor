@@ -1,0 +1,106 @@
+body{
+margin:0;
+font-family:sans-serif;
+background:#111;
+color:white;
+text-align:center;
+}
+
+.topbar{
+display:flex;
+justify-content:space-between;
+width:600px;
+margin:20px auto;
+font-size:20px;
+}
+
+#startBtn{
+padding:10px 20px;
+font-size:18px;
+cursor:pointer;
+margin-bottom:10px;
+}
+
+#game{
+margin:auto;
+display:grid;
+grid-template-columns:repeat(15,40px);
+grid-template-rows:repeat(15,40px);
+width:600px;
+background:#000;
+}
+
+#game div{
+width:40px;
+height:40px;
+image-rendering:pixelated;
+}
+
+.wall{
+background:#1e4fff;
+}
+
+.point{
+width:100%;
+height:100%;
+background:url("images/dot.png");
+background-size:30%;
+background-repeat:no-repeat;
+background-position:center;
+}
+
+#player{
+background:url("images/player.png");
+background-size:contain;
+background-repeat:no-repeat;
+background-position:center;
+}
+
+.enemy{
+background:url("images/enemy.png");
+background-size:contain;
+background-repeat:no-repeat;
+background-position:center;
+}
+
+.hit{
+animation:hitAnim 0.3s infinite alternate;
+}
+
+.dead{
+filter:grayscale(100%);
+opacity:0.5;
+}
+
+@keyframes hitAnim{
+from{transform:scale(1)}
+to{transform:scale(1.2)}
+}
+
+.controls{
+margin-top:15px;
+}
+
+.controls button{
+font-size:22px;
+padding:10px 15px;
+margin:5px;
+cursor:pointer;
+}
+
+.leaderboard{
+width:300px;
+margin:20px auto;
+background:#222;
+padding:10px;
+border-radius:6px;
+}
+
+.leaderboard h3{
+margin:5px 0;
+}
+
+.lives span{
+font-size:22px;
+margin-left:5px;
+}
